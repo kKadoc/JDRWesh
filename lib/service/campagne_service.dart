@@ -20,22 +20,25 @@ class CampagneService {
     final data = await json.decode(response);
 
     campagnes = [];
-    var annees = [];
+    var firstYear = DateTime.now().year;
+    var lastYear = firstYear;
     for (final item in data["campagnes"]) {
       print(item);
       var c = Campagne.byItem(item);
       campagnes!.add(c);
 
-      if (!annees.contains(c.debut.year)) {
-        annees.add(c.debut.year);
-        var cYear = Campagne();
-        cYear.nom = c.debut.year.toString();
-        cYear.debut = DateTime.parse(c.debut.year.toString() + "-01-01");
-
-        campagnes!.add(cYear);
+      if (c.debut.year < firstYear) {
+        firstYear = c.debut.year;
       }
-
-      campagnes!.sort((a, b) => a.debut.compareTo(b.debut));
     }
+    for (var y = firstYear; y <= lastYear; y++) {
+      var cYear = Campagne();
+      cYear.nom = y.toString();
+      cYear.debut = DateTime.parse(y.toString() + "-01-01");
+
+      campagnes!.add(cYear);
+    }
+
+    campagnes!.sort((a, b) => a.debut.compareTo(b.debut));
   }
 }

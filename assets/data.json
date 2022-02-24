@@ -4,22 +4,62 @@
             "nom": "Hildorien",
             "mj": "Guillaume",
             "systeme": "D&D 5",
-            "artwork": "artworks/hildorien1.jpg",
+            "artwork": "hildorien1.jpg",
             "debut": "2020-09-21"
         },
         {
             "nom": "Hildorien 3",
             "mj": "Guillaume",
             "systeme": "D&D 5",
-            "artwork": "artworks/hildorien3.jpg",
+            "artwork": "hildorien3.jpg",
             "debut": "2021-09-21"
         },
         {
             "nom": "Faéments",
             "mj": "François",
-            "systeme": "Faéments",
-            "artwork": "artworks/hildorien4.jpg",
-            "debut": "2019-09-21"
+            "systeme": "Temps de Faéments",
+            "artwork": "hildorien4.jpg",
+            "debut": "2016-09-21",
+            "joueurs": [
+                {
+                   "nom":"Guillaume" 
+                },
+                {
+                    "nom":"Sarah" 
+                },
+                {
+                    "nom":"JC" 
+                }
+            ]
+        },
+        {
+            "nom": "Star Wars Commando",
+            "mj": "François",
+            "systeme": "Star Wars Commando",
+            "artwork": "hildorien4.jpg",
+            "debut": "2017-09-21",
+            "joueurs": [
+                {
+                   "nom":"Guillaume" 
+                },
+                {
+                    "nom":"JC" 
+                }
+            ]
+        },
+        {
+            "nom": "Adalon",
+            "mj": "JC",
+            "systeme": "Adalon",
+            "artwork": "hildorien4.jpg",
+            "debut": "2017-09-21"
+        },
+        {
+            "nom": "Star Wars D20",
+            "mj": "François",
+            "systeme": "Star Wars D20",
+            "artwork": "hildorien4.jpg",
+            "debut": "2017-09-21"
         }
     ]
 }

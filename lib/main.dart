@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jdrwesh/service/color_service.dart';
 
 import 'model/campagne.dart';
 import 'service/campagne_service.dart';
@@ -8,6 +9,7 @@ const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
 RegExp regYear = RegExp(r"^\d{4}$");
 CampagneService campagneService = CampagneService();
+ColorService colorService = ColorService();
 
 void main() {
   runApp(const JDRWesh());
@@ -122,38 +124,85 @@ class CampagneListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      child: AspectRatio(
-        aspectRatio: 16 / 9,
-        child: ClipRRect(
-          child: Stack(
-            children: [
-              _buildParallaxBackground(context),
-              _buildGradient(),
-              _buildTitleAndSubtitle(),
-            ],
+    return Container(
+        constraints: BoxConstraints(maxWidth: 700),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          child: AspectRatio(
+            aspectRatio: 16 / 6,
+            child: ClipRRect(
+              child: Stack(
+                children: [
+                  _buildBackground(context),
+                  _buildGradient(),
+                  _buildTitleAndSubtitle(),
+                  _buildSystemIcon(),
+                  _buildPlayers(),
+                ],
+              ),
+            ),
           ),
-        ),
+        ));
+  }
+
+  Widget _buildPlayers() {
+    return Positioned(
+      right: 10,
+      bottom: 15,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              textDirection: TextDirection.rtl,
+              children: [
+                Padding(
+                    padding: EdgeInsets.all(3),
+                    child: CircleAvatar(
+                      backgroundColor:
+                          colorService.getColor(campagne.mj.toString()),
+                      child: Text(
+                        campagne.mj.toString().substring(0, 2),
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Arial"),
+                      ),
+                    ))
+              ]),
+          Row(
+            children: [
+              for (final joueur in campagne.joueurs)
+                Padding(
+                    padding: EdgeInsets.all(3),
+                    child: CircleAvatar(
+                      backgroundColor: colorService.getColor(joueur.toString()),
+                      child: Text(
+                        joueur.toString().substring(0, 2),
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Arial"),
+                      ),
+                    ))
+            ],
+          )
+        ],
       ),
     );
   }
 
-  Widget _buildParallaxBackground(BuildContext context) {
-    return Flow(
-      delegate: ParallaxFlowDelegate(
-        scrollable: Scrollable.of(context)!,
-        listItemContext: context,
-        backgroundImageKey: _backgroundImageKey,
-      ),
-      children: [
-        Image.asset(
-          campagne.artWork.toString(),
-          key: _backgroundImageKey,
-          fit: BoxFit.cover,
-        ),
-      ],
-    );
+  Widget _buildBackground(BuildContext context) {
+    return Stack(fit: StackFit.expand, children: [
+      Image.asset(
+        campagne.artWork.toString(),
+        key: _backgroundImageKey,
+        fit: BoxFit.cover,
+      )
+    ]);
   }
 
   Widget _buildGradient() {
@@ -161,10 +210,13 @@ class CampagneListItem extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.transparent, Colors.black.withOpacity(0.7)],
+            colors: [
+              Colors.brown.withOpacity(0.5),
+              Colors.white.withOpacity(0)
+            ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: const [0.6, 0.95],
+            stops: const [0, 1],
           ),
         ),
       ),
@@ -173,8 +225,8 @@ class CampagneListItem extends StatelessWidget {
 
   Widget _buildTitleAndSubtitle() {
     return Positioned(
-      left: 20,
-      bottom: 20,
+      left: 10,
+      top: 15,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -182,20 +234,54 @@ class CampagneListItem extends StatelessWidget {
           Text(
             campagne.nom.toString(),
             style: const TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            campagne.systeme.toString(),
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-            ),
-          ),
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Arial"),
+          )
         ],
       ),
     );
+  }
+
+  Widget _buildSystemIcon() {
+    var logo = "";
+    switch (campagne.systeme) {
+      case "D&D 5":
+        logo = "dd5.png";
+        break;
+
+      case "D&D 4":
+        logo = "dd4.png";
+        break;
+
+      case "D&D 3.5":
+        logo = "dd3.png";
+        break;
+
+      case "D&D 3":
+        logo = "dd3.png";
+        break;
+
+      case "Adalon":
+        logo = "adalon.png";
+        break;
+
+      case "Temps de Faéments":
+        logo = "faements.png";
+        break;
+
+      case "Star Wars Commando":
+        logo = "swcommando.png";
+        break;
+
+      case "Star Wars D20":
+        logo = "sw.png";
+        break;
+    }
+    return Positioned(
+        right: 10,
+        top: 10,
+        child: Image.asset("assets/logos/" + logo, height: 44));
   }
 }
