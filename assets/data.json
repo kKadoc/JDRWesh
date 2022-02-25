@@ -5,7 +5,24 @@
             "mj": "Guillaume",
             "systeme": "D&D 5",
             "artwork": "hildorien1.jpg",
-            "debut": "2020-09-21"
+            "debut": "2020-09-21",
+            "joueurs": [
+                {
+                   "nom":"Flora" 
+                },
+                {
+                    "nom":"Sarah" 
+                },
+                {
+                    "nom":"JC" 
+                },
+                {
+                    "nom":"Matthieu" 
+                },
+                {
+                    "nom":"François" 
+                }
+            ]
         },
         {
             "nom": "Hildorien 3",

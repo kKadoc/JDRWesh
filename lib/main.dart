@@ -3,13 +3,13 @@ import 'package:jdrwesh/service/color_service.dart';
 
 import 'model/campagne.dart';
 import 'service/campagne_service.dart';
-import 'widget/parallax/parallax.dart';
-
-const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+import 'service/player_service.dart';
 
 RegExp regYear = RegExp(r"^\d{4}$");
+
 CampagneService campagneService = CampagneService();
 ColorService colorService = ColorService();
+PlayerService playerService = PlayerService();
 
 void main() {
   runApp(const JDRWesh());
@@ -23,7 +23,8 @@ class JDRWesh extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'JDR Wesh !',
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
+      theme: ThemeData.dark()
+          .copyWith(scaffoldBackgroundColor: Color.fromARGB(255, 18, 32, 47)),
       debugShowCheckedModeBanner: false,
       home: HistoryPage(title: 'JDR Wesh !'),
     );
@@ -151,48 +152,54 @@ class CampagneListItem extends StatelessWidget {
       bottom: 15,
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Row(
               mainAxisAlignment: MainAxisAlignment.end,
               textDirection: TextDirection.rtl,
-              children: [
-                Padding(
-                    padding: EdgeInsets.all(3),
-                    child: CircleAvatar(
-                      backgroundColor:
-                          colorService.getColor(campagne.mj.toString()),
-                      child: Text(
-                        campagne.mj.toString().substring(0, 2),
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Arial"),
-                      ),
-                    ))
-              ]),
+              children: [_buildAvatar(campagne.mj.toString())]),
           Row(
             children: [
-              for (final joueur in campagne.joueurs)
-                Padding(
-                    padding: EdgeInsets.all(3),
-                    child: CircleAvatar(
-                      backgroundColor: colorService.getColor(joueur.toString()),
-                      child: Text(
-                        joueur.toString().substring(0, 2),
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Arial"),
-                      ),
-                    ))
+              for (final joueur in campagne.joueurs) _buildAvatar(joueur)
             ],
           )
         ],
       ),
     );
+  }
+
+  Widget _buildAvatar(String player) {
+    if (playerService.hasPicture(player)) {
+      return Padding(
+          padding: EdgeInsets.all(3),
+          child: Container(
+              decoration: BoxDecoration(
+                color: colorService.getColor(player),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(blurRadius: 5, color: Colors.black, spreadRadius: 1)
+                ],
+              ),
+              child: Padding(
+                  padding: EdgeInsets.all(2),
+                  child: CircleAvatar(
+                    backgroundImage:
+                        AssetImage("assets/players/" + player + ".jpg"),
+                  ))));
+    } else {
+      return Padding(
+          padding: EdgeInsets.all(3),
+          child: CircleAvatar(
+              backgroundColor: colorService.getColor(player),
+              child: Text(
+                player.substring(0, 2),
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Arial"),
+              )));
+    }
   }
 
   Widget _buildBackground(BuildContext context) {
