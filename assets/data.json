@@ -1,82 +1,46 @@
 {
     "campagnes": [
         {
-            "nom": "Hildorien",
-            "mj": "Guillaume",
+            "nom": "L'Héritage de Tymora",
+            "mj": {
+                "nom":"Guillaume",
+                "personnage": "Velsharoon",
+                "artwork" : ""
+            },
             "systeme": "D&D 5",
-            "artwork": "hildorien1.jpg",
-            "debut": "2020-09-21",
+            "artworks": ["tymora1.jpg","tymora2.PNG","tymora3.webp","tymora4.jpg","tymora5.webp","tymora6.jpeg","tymora7.jpg","tymora8.webp"],
+            "debut": "2020-12-05",
+            "statut": "en cours",
             "joueurs": [
                 {
-                   "nom":"Flora" 
+                   "nom":"François", 
+                   "personnage": "Marna Shaemov",
+                   "classe": "Clerc",
+                   "niveau": "6",
+                   "artwork" : "Marna.jpg"
                 },
                 {
-                    "nom":"Sarah" 
-                },
-                {
-                    "nom":"JC" 
-                },
-                {
-                    "nom":"Matthieu" 
-                },
-                {
-                    "nom":"François" 
-                }
+                    "nom":"Thomas", 
+                    "personnage": "Belwar Seamfinder",
+                    "classe": "Roublard",
+                    "niveau": "6",
+                    "artwork" : "Belwar.png"
+                 },
+                 {
+                    "nom":"JC", 
+                    "personnage": "Thoradin",
+                    "classe": "Barbare",
+                    "niveau": "6",
+                    "artwork" : "Thoradin.png"
+                 },
+                 {
+                    "nom":"Guillaume L", 
+                    "personnage": "Amras Holimion",
+                    "classe": "Magicien",
+                    "niveau": "6",
+                    "artwork" : "Amras.jpg"
+                 }
             ]
-        },
-        {
-            "nom": "Hildorien 3",
-            "mj": "Guillaume",
-            "systeme": "D&D 5",
-            "artwork": "hildorien3.jpg",
-            "debut": "2021-09-21"
-        },
-        {
-            "nom": "Faéments",
-            "mj": "François",
-            "systeme": "Temps de Faéments",
-            "artwork": "hildorien4.jpg",
-            "debut": "2016-09-21",
-            "joueurs": [
-                {
-                   "nom":"Guillaume" 
-                },
-                {
-                    "nom":"Sarah" 
-                },
-                {
-                    "nom":"JC" 
-                }
-            ]
-        },
-        {
-            "nom": "Star Wars Commando",
-            "mj": "François",
-            "systeme": "Star Wars Commando",
-            "artwork": "hildorien4.jpg",
-            "debut": "2017-09-21",
-            "joueurs": [
-                {
-                   "nom":"Guillaume" 
-                },
-                {
-                    "nom":"JC" 
-                }
-            ]
-        },
-        {
-            "nom": "Adalon",
-            "mj": "JC",
-            "systeme": "Adalon",
-            "artwork": "hildorien4.jpg",
-            "debut": "2017-09-21"
-        },
-        {
-            "nom": "Star Wars D20",
-            "mj": "François",
-            "systeme": "Star Wars D20",
-            "artwork": "hildorien4.jpg",
-            "debut": "2017-09-21"
         }
     ]
 }

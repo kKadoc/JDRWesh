@@ -16,7 +16,9 @@ class ColorService {
   getColor(String key) {
     if (usedColors.containsKey(key)) return usedColors[key];
     cpt++;
-    if (cpt > list.length) cpt = 0;
+    if (cpt >= list.length) {
+      cpt = 0;
+    }
     usedColors[key] = list[cpt];
     return list[cpt];
   }
