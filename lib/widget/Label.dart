@@ -12,7 +12,7 @@ class Label extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
         child: Row(children: [
-          Text(desc + " : ",
+          Text(desc,
               style: const TextStyle(
                   color: Colors.black,
                   fontSize: 16,

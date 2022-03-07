@@ -71,19 +71,23 @@ class _CampagneItemState extends State<CampagneItem> {
             curve: Curves.ease,
             child: Column(children: [
               Divider(),
-              Label("Début", DateFormat('d/M/y').format(widget.campagne.debut)),
+              Label("Début : ",
+                  DateFormat('d/M/y').format(widget.campagne.debut)),
               Label(
-                  "Fin",
+                  "Fin : ",
                   widget.campagne.fin != null
                       ? DateFormat('d/M/y').format(widget.campagne.fin!)
                       : "-"),
               Label(
-                  "Résultat",
+                  "Résultat : ",
                   widget.campagne.fin != null
                       ? widget.campagne.statut
                       : "Campagne en cours"),
               Divider(),
-              Label("Résumé", widget.campagne.resume.toString()),
+              Label("Résumé", ""),
+              Text(widget.campagne.resume.toString(),
+                  style: const TextStyle(
+                      color: Colors.black, fontSize: 16, fontFamily: "Arial"))
             ])));
   }
 
