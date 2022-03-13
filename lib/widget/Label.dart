@@ -14,13 +14,13 @@ class Label extends StatelessWidget {
         child: Row(children: [
           Text(desc,
               style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.black87,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   fontFamily: "Arial")),
           Text(value,
               style: const TextStyle(
-                  color: Colors.black, fontSize: 16, fontFamily: "Arial"))
+                  color: Colors.black87, fontSize: 16, fontFamily: "Arial"))
         ]));
   }
 }

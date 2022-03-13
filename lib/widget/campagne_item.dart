@@ -13,17 +13,36 @@ class CampagneItem extends StatefulWidget {
 
   final Campagne campagne;
   bool expanded = true;
+  int currentImageIndex = 0;
 
   @override
   _CampagneItemState createState() => _CampagneItemState();
 }
 
 class _CampagneItemState extends State<CampagneItem> {
-  int _currentIndex = 0;
-
   toggleExpanded() {
     setState(() {
       widget.expanded = !widget.expanded;
+    });
+  }
+
+  nextImg() {
+    setState(() {
+      if (widget.currentImageIndex == widget.campagne.artworks.length - 1) {
+        widget.currentImageIndex = 0;
+      } else {
+        widget.currentImageIndex++;
+      }
+    });
+  }
+
+  previousImg() {
+    setState(() {
+      if (widget.currentImageIndex == 0) {
+        widget.currentImageIndex = widget.campagne.artworks.length - 1;
+      } else {
+        widget.currentImageIndex--;
+      }
     });
   }
 
@@ -60,39 +79,85 @@ class _CampagneItemState extends State<CampagneItem> {
   CarouselController buttonCarouselController = CarouselController();
 
   Widget _buildInfos() {
-    return Positioned(
-        top: 70,
-        left: 10,
-        child: AnimatedContainer(
-            // Define how long the animation should take.
-            duration: const Duration(seconds: 1),
-            // Provide an optional curve to make the animation feel smoother.
-            width: widget.expanded ? 400 : 0,
-            curve: Curves.ease,
-            child: Column(children: [
-              Divider(),
-              Label("Début : ",
-                  DateFormat('d/M/y').format(widget.campagne.debut)),
-              Label(
-                  "Fin : ",
-                  widget.campagne.fin != null
-                      ? DateFormat('d/M/y').format(widget.campagne.fin!)
-                      : "-"),
-              Label(
-                  "Résultat : ",
-                  widget.campagne.fin != null
-                      ? widget.campagne.statut
-                      : "Campagne en cours"),
-              Divider(),
-              Label("Résumé", ""),
-              Text(widget.campagne.resume.toString(),
-                  style: const TextStyle(
-                      color: Colors.black, fontSize: 16, fontFamily: "Arial"))
-            ])));
+    return widget.expanded
+        ? Positioned(
+            top: 70,
+            left: 0,
+            child: AnimatedContainer(
+                // Define how long the animation should take.
+                duration: const Duration(seconds: 1),
+                // Provide an optional curve to make the animation feel smoother.
+                width: widget.expanded ? 400 : 0,
+                curve: Curves.ease,
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white
+                            .withOpacity(widget.expanded ? 0.6 : 0.6),
+                        borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(0),
+                          bottomRight: Radius.circular(0),
+                        )),
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(10, 3, 30, 3),
+                        child: Column(children: [
+                          Divider(),
+                          Label(
+                              "Début : ",
+                              DateFormat('dd/MM/y')
+                                  .format(widget.campagne.debut)),
+                          Label(
+                              "Fin : ",
+                              widget.campagne.fin != null
+                                  ? DateFormat('d/M/y')
+                                      .format(widget.campagne.fin!)
+                                  : "-"),
+                          Label(
+                              "Résultat : ",
+                              widget.campagne.fin != null
+                                  ? widget.campagne.statut
+                                  : "Campagne en cours"),
+                          Divider(),
+                          Label("Résumé", ""),
+                          Text(widget.campagne.resume.toString(),
+                              style: const TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 16,
+                                  fontFamily: "Arial"))
+                        ])))))
+        : Container();
   }
 
   Widget _buildCarousel() {
     return Positioned(
+        top: 15,
+        right: 0,
+        child: AnimatedContainer(
+            // Define how long the animation should take.
+            duration: const Duration(seconds: 1),
+            // Provide an optional curve to make the animation feel smoother.
+            width: widget.expanded ? 932 : 0,
+            curve: Curves.ease,
+            color: Colors.white.withOpacity(0.6),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              IconButton(
+                iconSize: 50,
+                icon: const Icon(Icons.chevron_left),
+                color: Colors.black87,
+                onPressed: () => previousImg(),
+              ),
+              Container(
+                  width: widget.expanded ? 800 : 0,
+                  height: 500,
+                  child: Image.asset("assets/artworks/" +
+                      widget.campagne.artworks[widget.currentImageIndex])),
+              IconButton(
+                  iconSize: 50,
+                  color: Colors.black87,
+                  icon: const Icon(Icons.chevron_right),
+                  onPressed: () => nextImg())
+            ])));
+
+    /* return Positioned(
         top: 15,
         right: 0,
         child: AnimatedContainer(
@@ -139,7 +204,7 @@ class _CampagneItemState extends State<CampagneItem> {
                   onPressed: () => buttonCarouselController.nextPage(
                       duration: Duration(milliseconds: 300),
                       curve: Curves.linear))
-            ])));
+            ]))); */
   }
 
   Widget _buildMoreButton() {
@@ -151,7 +216,7 @@ class _CampagneItemState extends State<CampagneItem> {
             toggleExpanded();
           },
           style:
-              ElevatedButton.styleFrom(primary: Colors.white.withOpacity(0.7)),
+              ElevatedButton.styleFrom(primary: Colors.white.withOpacity(0.6)),
           child: Padding(
             padding: const EdgeInsets.all(5),
             child: Row(
@@ -228,7 +293,7 @@ class _CampagneItemState extends State<CampagneItem> {
                       ? Text(player.personnage.toString(),
                           textAlign: TextAlign.center,
                           style: const TextStyle(
-                              color: Colors.black,
+                              color: Colors.black87,
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                               fontFamily: "Arial"))
@@ -236,13 +301,14 @@ class _CampagneItemState extends State<CampagneItem> {
                 ),
                 Padding(
                   padding: EdgeInsets.all(0),
-                  child: player.personnage != null
+                  child: player.classe != null
                       ? Text(
                           player.classe.toString() +
-                              " niv. " +
-                              player.niveau.toString(),
+                              (player.niveau != null
+                                  ? " niv. " + player.niveau.toString()
+                                  : ""),
                           style: const TextStyle(
-                              color: Colors.black,
+                              color: Colors.black87,
                               fontSize: 14,
                               fontFamily: "Arial"))
                       : null,
@@ -297,7 +363,7 @@ class _CampagneItemState extends State<CampagneItem> {
         // Provide an optional curve to make the animation feel smoother.
         curve: Curves.fastOutSlowIn,
         decoration: BoxDecoration(
-            color: Colors.white.withOpacity(widget.expanded ? 0.8 : 0)),
+            color: Colors.black.withOpacity(widget.expanded ? 0.4 : 0)),
       )
     ]);
   }
@@ -308,8 +374,8 @@ class _CampagneItemState extends State<CampagneItem> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.brown.withOpacity(0.5),
-              Colors.white.withOpacity(0)
+              Colors.white.withOpacity(widget.expanded ? 0.6 : 0.3),
+              Colors.white.withOpacity(widget.expanded ? 0.6 : 0)
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -322,28 +388,41 @@ class _CampagneItemState extends State<CampagneItem> {
 
   Widget _buildTitleAndSubtitle() {
     return Positioned(
-      left: 10,
-      top: 15,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            widget.campagne.nom.toString(),
-            style: const TextStyle(
-                color: Colors.black,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Arial"),
-          ),
-          Text(widget.campagne.systeme.toString(),
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Arial"))
-        ],
-      ),
-    );
+        left: 0,
+        top: 15,
+        child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+            child: Container(
+                width: 400,
+                decoration: BoxDecoration(
+                    color:
+                        Colors.white.withOpacity(widget.expanded ? 0.6 : 0.6),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(widget.expanded ? 0 : 35),
+                      bottomRight: Radius.circular(widget.expanded ? 0 : 35),
+                    )),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 3, 30, 3),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.campagne.nom.toString(),
+                        style: const TextStyle(
+                            color: Colors.black87,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Arial"),
+                      ),
+                      Text(widget.campagne.systeme.toString(),
+                          style: const TextStyle(
+                              color: Colors.black87,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Arial"))
+                    ],
+                  ),
+                ))));
   }
 }

@@ -13,7 +13,7 @@ class RightSignet extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
         child: Container(
             decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withOpacity(0.6),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(radius),
                   bottomLeft: Radius.circular(radius),

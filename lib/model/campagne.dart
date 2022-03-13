@@ -16,13 +16,21 @@ class Campagne {
   Campagne.byItem(item) {
     nom = item["nom"];
     mj = Joueur(item["mj"]["nom"]);
+    mj.artwork = item["mj"]["artwork"];
+    mj.personnage = item["mj"]["personnage"];
+    mj.niveau = item["mj"]["niveau"];
+    mj.classe = item["mj"]["classe"];
     systeme = item["systeme"];
+    resume = item["resume"];
     if (item["artworks"] != null) {
       for (var a in item["artworks"]) {
         artworks.add(a.toString());
       }
     }
     debut = DateTime.parse(item["debut"]);
+    if (item["fin"] != null) {
+      fin = DateTime.parse(item["fin"]);
+    }
     if (item["joueurs"] != null) {
       for (var j in item["joueurs"]) {
         Joueur joueur = Joueur(j["nom"]);
