@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "e7b8982e23db85f55d6227c8e6d35b14",
+  "assets/AssetManifest.json": "12f3d026a5c1c065a359f9630c67ed8c",
 "assets/assets/artworks/hildorien1.jpg": "7c0cac72378ea54e6057ff9a5e9df863",
 "assets/assets/artworks/hildorien10.jpg": "e17fb003ba064f1c8a5a6893daf96896",
 "assets/assets/artworks/hildorien11.jpg": "c02b792549e9bf7c14a1d87f993f7021",
@@ -76,6 +76,7 @@ const RESOURCES = {
 "assets/assets/players/Sarah.jpg": "9616c4301ee13d1161ff8ea314bae256",
 "assets/assets/players/Thoradin.png": "23b30b3446e084f46154eeafc98a8aab",
 "assets/assets/players/Velsharoon.webp": "98412dec1e242b4b0c6c7c18e9ce32c9",
+"assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/NOTICES": "619d05f751c1b65b852262fc85fee97e",
@@ -89,8 +90,8 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5e203b9ab3437036f726ee599051d13a",
-"/": "5e203b9ab3437036f726ee599051d13a",
+"index.html": "fc741178c53dadd03baf1e7e120053cc",
+"/": "fc741178c53dadd03baf1e7e120053cc",
 "main.dart.js": "9749c12cc83889f1b0902d8059a81a35",
 "manifest.json": "f1147b4a86e0f671afeefb602cfac349",
 "version.json": "4e3b24a8653a4b768d22848b7274f9b5"
