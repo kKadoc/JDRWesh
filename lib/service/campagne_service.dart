@@ -37,6 +37,7 @@ class CampagneService {
       cYear.debut = DateTime.parse(y.toString() + "-01-01");
 
       campagnes!.add(cYear);
+      print(cYear);
     }
 
     campagnes!.sort((a, b) => a.debut.compareTo(b.debut));

@@ -12,7 +12,7 @@ class CampagneItem extends StatefulWidget {
   CampagneItem({Key? key, required this.campagne}) : super(key: key);
 
   final Campagne campagne;
-  bool expanded = true;
+  bool expanded = false;
   int currentImageIndex = 0;
 
   @override
