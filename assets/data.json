@@ -148,7 +148,7 @@
             "nom": "Alarian",
             "mj": {
                 "nom":"Thibault",
-                "artwork" : "Golem.webp"
+                "artwork" : "Angus.png"
             },
             "systeme": "D&D 5",
             "resume": "",
@@ -160,7 +160,7 @@
                 {
                    "nom":"Pierre", 
                    "personnage": "Důrcom",
-                   "classe": "Artificier",
+                   "classe": "Moine",
                    "niveau": "3",
                    "artwork" : "Durcom.png"
                 },
@@ -183,7 +183,7 @@
                     "personnage": "Lyanna Winter",
                     "classe": "Magicien",
                     "niveau": "3",
-                    "artwork" : "Lyanna.jpg"
+                    "artwork" : "Lyanna.png"
                  }
             ]
         }
