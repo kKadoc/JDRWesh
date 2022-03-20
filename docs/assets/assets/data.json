@@ -187,5 +187,40 @@
                  }
             ]
         }
+        ,
+        {
+            "nom": "Pélerinage polaire",
+            "mj": {
+                "nom":"JC",
+                "artwork" : "wolf.jpg"
+            },
+            "systeme": "Adalon",
+            "resume": "",
+            "artworks": ["pelerinage1.jpg"],
+            "debut": "2017-01-02",
+            "fin": "2017-09-01",
+            "statut": "Arrêt prématuré",
+            "joueurs": [
+                {
+                   "nom":"Guillaume"
+                },
+                {
+                    "nom":"François"
+                 },
+                 {
+                    "nom":"Flora"
+                 },
+                 {
+                    "nom":"Matthieu"
+                 },
+                 {
+                    "nom":"Thomas"
+                 },
+                 {
+                    "nom":"Sarah"
+                 }
+                 
+            ]
+        }
     ]
 }

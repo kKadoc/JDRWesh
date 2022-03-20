@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "ec3eb8edc740ba39e7fc2afb81a09687",
+  "assets/AssetManifest.json": "4a796a35181cb8235e7b351e616405dc",
 "assets/assets/artworks/alarian1.jpg": "2ff035dff04d1633736acfdaafcd8ddb",
 "assets/assets/artworks/alarian2.png": "55a6642850f0126920ee6ebd19dbe1cd",
 "assets/assets/artworks/alarian3.png": "11a16d71a1546d9ebc5ec45d859e1ba0",
@@ -31,6 +31,7 @@ const RESOURCES = {
 "assets/assets/artworks/hildorien7.jpg": "cbc7ef251b55496c3f6f9c2937d38a25",
 "assets/assets/artworks/hildorien8.jpg": "4c51ac2bfe8fa046f79f483095254d72",
 "assets/assets/artworks/hildorien9.jpg": "a2c8bf8bfba6cd690ad0284290d1382d",
+"assets/assets/artworks/pelerinage1.jpg": "30798085eb0e96b92d5b47fa0e1a442e",
 "assets/assets/artworks/tymora1.jpg": "50767811a3ed1d720d7702e2b44033bb",
 "assets/assets/artworks/tymora2.PNG": "6798ecdb66a59c220859dabee9116c4d",
 "assets/assets/artworks/tymora3.webp": "ced10b8974fa05eb4881c518f7a1dfd1",
@@ -55,7 +56,7 @@ const RESOURCES = {
 "assets/assets/data/defaite.png": "1266d17b07fd3b490d88be77d9a3d3bc",
 "assets/assets/data/encours.png": "f773f868263a7793d4c8661b189cb9fc",
 "assets/assets/data/victoire.png": "e6535efe33855613f6250397a22690de",
-"assets/assets/data.json": "e04537b865221132f6a84c4b8c2eb250",
+"assets/assets/data.json": "a9243fd859df674674c58b2ea565c630",
 "assets/assets/logos/adalon.png": "1f6d4b9bf81d325744cd734993f79c8b",
 "assets/assets/logos/dd3.png": "d0f113d75bc9f55f919ffa8027b4b727",
 "assets/assets/logos/dd4.png": "68ca62d822edcb3ed913d5b6e5807894",
@@ -89,9 +90,11 @@ const RESOURCES = {
 "assets/assets/players/Sarah.jpg": "9616c4301ee13d1161ff8ea314bae256",
 "assets/assets/players/Thoradin.png": "23b30b3446e084f46154eeafc98a8aab",
 "assets/assets/players/Velsharoon.webp": "98412dec1e242b4b0c6c7c18e9ce32c9",
+"assets/assets/players/wolf.jpg": "3353f04fb91700480b5e4f8c9d05bc31",
 "assets/docs/assets/assets/data.json": "e04537b865221132f6a84c4b8c2eb250",
-"assets/docs/assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
+"assets/docs/assets/docs/assets/assets/data.json": "e04537b865221132f6a84c4b8c2eb250",
 "assets/docs/assets/docs/assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
+"assets/docs/assets/docs/assets/docs/assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/NOTICES": "619d05f751c1b65b852262fc85fee97e",
@@ -105,9 +108,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5af0f89110b4a666796bbaa2278b6142",
-"/": "5af0f89110b4a666796bbaa2278b6142",
-"main.dart.js": "96df23ec8216ba9324c501c53fbb8b30",
+"index.html": "d5c6b9212fb13accbd9b40120c2ce6db",
+"/": "d5c6b9212fb13accbd9b40120c2ce6db",
+"main.dart.js": "a57c29e222ade959c76405898642f59a",
 "manifest.json": "f1147b4a86e0f671afeefb602cfac349",
 "version.json": "4e3b24a8653a4b768d22848b7274f9b5"
 };

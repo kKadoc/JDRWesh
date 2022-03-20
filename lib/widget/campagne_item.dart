@@ -108,7 +108,7 @@ class _CampagneItemState extends State<CampagneItem> {
                           Label(
                               "Fin : ",
                               widget.campagne.fin != null
-                                  ? DateFormat('d/M/y')
+                                  ? DateFormat('dd/MM/y')
                                       .format(widget.campagne.fin!)
                                   : "-"),
                           Label(

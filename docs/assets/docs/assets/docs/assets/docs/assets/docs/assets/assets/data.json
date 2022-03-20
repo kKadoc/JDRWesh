@@ -10,7 +10,7 @@
             "systeme": "D&D 5",
             "resume": "Velhsaroon, dieu des nécromants s'est attaqué à Tymora la déesse de la chance afin de lui voler son énergie divinine et devenir un dieu majeur. Dans une ultime tentative, Tymora a confié les restes de son âme à une jeune prétresse et à ses amis. Ces derniers devront découvrir les mécaniques de ce sombre rituel et affronter Velsharoon jusque dans son antre.",
             "artworks": ["tymora1.jpg","tymora2.PNG","tymora3.webp","tymora4.jpg","tymora5.webp","tymora6.jpeg","tymora7.jpg","tymora8.webp"],
-            "debut": "2021-12-05",
+            "debut": "2020-12-05",
             "statut": "en cours",
             "joueurs": [
                 {
@@ -53,8 +53,8 @@
             "systeme": "D&D 5",
             "resume": "Waterdeep est en prise avec un conflit de plus en plus violent entre deux organisations criminelles : La guilde de Xanathar et les Zentharims. Les personnages s'y retrouvent mélés malgré eux après avoir sauvé l'héritier de l'ancien seigneur manifeste Dagult Neverember. La renommée qu'ils en reçoivent leur permet de nouer de puissances alliances, nottament avec les Ménestrels et Grise-force, et les fait tomber en possession de la pierre de Golor. Ce puissant artefact magique permettant soit disant de retrouver le trésor perdu de Neverember est au centre de toutes les convoitises. Les personnages doivent se frayer un chemin entre les guildes à leur poursuite et atteignent enfin la salle du trésor gardée par un puissant dragon d'or. Une âpre séance de négociations et une mission d'extraction réussie sur le fil permettent de remettre le trésor à la ville de Waterdeep.",
             "artworks": ["waterdeep1.jpg","waterdeep2.webp","waterdeep3.webp","waterdeep4.webp","waterdeep5.jpg","waterdeep6.jpg","waterdeep7.png","waterdeep8.png","waterdeep9.jpg","waterdeep10.PNG","waterdeep11.png","waterdeep12.png","waterdeep13.jpg"],
-            "debut": "2021-02-15",
-            "fin": "2021-11-24",
+            "debut": "2019-01-01",
+            "fin": "2020-11-24",
             "statut": "Victoire !",
             "joueurs": [
                 {
@@ -102,7 +102,7 @@
             "systeme": "D&D 5",
             "resume": "",
             "artworks": ["hildorien1.jpg", "hildorien2.jpg", "hildorien3.jpg", "hildorien4.jpg", "hildorien5.jpg", "hildorien6.jpg", "hildorien7.jpg", "hildorien8.jpg", "hildorien9.jpg", "hildorien10.jpg", "hildorien11.jpg", "hildorien12.jpg", "hildorien13.jpg", "hildorien14.jpg", "hildorien15.jpg", "hildorien16.jpg", "hildorien17.jpg", "hildorien18.jpg", "hildorien19.jpg", "hildorien19.jpg"],
-            "debut": "2018-01-02",
+            "debut": "2018-01-01",
             "fin": "2019-01-02",
             "statut": "Victoire !",
             "joueurs": [
@@ -141,85 +141,6 @@
                     "niveau": "5",
                     "artwork" : "Raerthus.jpg"
                  }
-            ]
-        }
-        ,
-        {
-            "nom": "Alarian",
-            "mj": {
-                "nom":"Thibault",
-                "artwork" : "Angus.png"
-            },
-            "systeme": "D&D 5",
-            "resume": "",
-            "artworks": ["alarian1.jpg","alarian2.png","alarian3.png","alarian4.png","alarian5.png","alarian6.png","alarian7.png","alarian8.png"],
-            "debut": "2020-07-27",
-            "fin": "2021-02-02",
-            "statut": "Arrêt prématuré",
-            "joueurs": [
-                {
-                   "nom":"Pierre", 
-                   "personnage": "Důrcom",
-                   "classe": "Moine",
-                   "niveau": "3",
-                   "artwork" : "Durcom.png"
-                },
-                {
-                    "nom":"Guillaume", 
-                    "personnage": "Conrad Falone",
-                    "classe": "Assassin",
-                    "niveau": "3",
-                    "artwork" : "Conrad.jpg"
-                 },
-                 {
-                    "nom":"Xavier", 
-                    "personnage": "Charon",
-                    "classe": "Clerc",
-                    "niveau": "3",
-                    "artwork" : "Charon.png"
-                 },
-                 {
-                    "nom":"Léo", 
-                    "personnage": "Lyanna Winter",
-                    "classe": "Magicien",
-                    "niveau": "3",
-                    "artwork" : "Lyanna.png"
-                 }
-            ]
-        }
-        ,
-        {
-            "nom": "Pélerinage polaire",
-            "mj": {
-                "nom":"JC",
-                "artwork" : "wolf.jpg"
-            },
-            "systeme": "Adalon",
-            "resume": "",
-            "artworks": ["pelerinage1.jpg"],
-            "debut": "2017-01-02",
-            "fin": "2017-09-01",
-            "statut": "Arrêt prématuré",
-            "joueurs": [
-                {
-                   "nom":"Guillaume"
-                },
-                {
-                    "nom":"François"
-                 },
-                 {
-                    "nom":"Flora"
-                 },
-                 {
-                    "nom":"Matthieu"
-                 },
-                 {
-                    "nom":"Thomas"
-                 },
-                 {
-                    "nom":"Sarah"
-                 }
-                 
             ]
         }
     ]
