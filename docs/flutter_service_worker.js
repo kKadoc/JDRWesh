@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "b6a0bfe9d24f5c1de90d44ff242b86ac",
+  "assets/AssetManifest.json": "ec3eb8edc740ba39e7fc2afb81a09687",
 "assets/assets/artworks/alarian1.jpg": "2ff035dff04d1633736acfdaafcd8ddb",
 "assets/assets/artworks/alarian2.png": "55a6642850f0126920ee6ebd19dbe1cd",
 "assets/assets/artworks/alarian3.png": "11a16d71a1546d9ebc5ec45d859e1ba0",
@@ -89,8 +89,9 @@ const RESOURCES = {
 "assets/assets/players/Sarah.jpg": "9616c4301ee13d1161ff8ea314bae256",
 "assets/assets/players/Thoradin.png": "23b30b3446e084f46154eeafc98a8aab",
 "assets/assets/players/Velsharoon.webp": "98412dec1e242b4b0c6c7c18e9ce32c9",
-"assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
+"assets/docs/assets/assets/data.json": "e04537b865221132f6a84c4b8c2eb250",
 "assets/docs/assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
+"assets/docs/assets/docs/assets/docs/assets/assets/data.json": "8011aca7b5db5e419a0e98a21f2cd47b",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/NOTICES": "619d05f751c1b65b852262fc85fee97e",
@@ -104,8 +105,8 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "11c7dda2ed4cffa964ab42b796574ee8",
-"/": "11c7dda2ed4cffa964ab42b796574ee8",
+"index.html": "5af0f89110b4a666796bbaa2278b6142",
+"/": "5af0f89110b4a666796bbaa2278b6142",
 "main.dart.js": "96df23ec8216ba9324c501c53fbb8b30",
 "manifest.json": "f1147b4a86e0f671afeefb602cfac349",
 "version.json": "4e3b24a8653a4b768d22848b7274f9b5"
