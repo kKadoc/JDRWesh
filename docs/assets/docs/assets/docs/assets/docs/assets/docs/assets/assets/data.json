@@ -1,55 +1,6 @@
 {
     "campagnes": [
-      {
-         "nom": "L'Héritage de Velsharoon",
-         "mj": {
-             "nom":"Guillaume",
-             "personnage": "Velsharoon",
-             "artwork" : "Velsharoon.webp"
-         },
-         "systeme": "D&D 5",
-         "resume": "Tymora est en quête de justice. Après s'être échappée des griffes de Velsharoon, elle recherche désormais ceux qui l'ont aider. Elle plonge les aventuriers dans un demi-plan parallèle afin qu'ils trouvent Velsharoon et lui arrachent ses secrets. ",
-         "artworks": ["tym (1).jpg","tym (2).jpg","tym (3).jpg","tym (4).jpg","tym (5).jpg"],
-         "debut": "2022-11-09",
-         "statut": "en cours",
-         "joueurs": [
-             {
-                "nom":"François", 
-                "personnage": "Marna Shaemov",
-                "classe": "Clerc",
-                "niveau": "8",
-                "artwork" : "Marna.jpg"
-             },
-             {
-                 "nom":"Cécile", 
-                 "personnage": "Pvarf",
-                 "classe": "Barbare",
-                 "niveau": "8",
-                 "artwork" : "Pvarf.jpg"
-              },
-              {
-                 "nom":"Gwendoline", 
-                 "personnage": "Brida",
-                 "classe": "Druide",
-                 "niveau": "8",
-                 "artwork" : "Brida.jpg"
-              },
-              {
-                 "nom":"Guillaume L", 
-                 "personnage": "Jin",
-                 "classe": "Moine",
-                 "niveau": "8",
-                 "artwork" : "jin2.jpg"
-              },
-              {
-                 "nom":"Jean", 
-                 "personnage": "Ankhas",
-                 "classe": "Ensorceleur",
-                 "niveau": "8",
-                 "artwork" : "ankhas.jpg"
-              }
-         ]
-     },{
+        {
             "nom": "L'Héritage de Tymora",
             "mj": {
                 "nom":"Guillaume",
@@ -57,11 +8,10 @@
                 "artwork" : "Velsharoon.webp"
             },
             "systeme": "D&D 5",
-            "resume": "Velhsaroon, dieu des nécromants s'est attaqué à Tymora la déesse de la chance afin de lui voler son énergie divine et devenir un dieu majeur. Dans une ultime tentative, Tymora a confié les restes de son âme à une jeune prétresse et à ses amis. Ces derniers devront découvrir les mécaniques de ce sombre rituel et affronter Velsharoon jusque dans son antre.",
+            "resume": "Velhsaroon, dieu des nécromants s'est attaqué à Tymora la déesse de la chance afin de lui voler son énergie divinine et devenir un dieu majeur. Dans une ultime tentative, Tymora a confié les restes de son âme à une jeune prétresse et à ses amis. Ces derniers devront découvrir les mécaniques de ce sombre rituel et affronter Velsharoon jusque dans son antre.",
             "artworks": ["tymora1.jpg","tymora2.PNG","tymora3.webp","tymora4.jpg","tymora5.webp","tymora6.jpeg","tymora7.jpg","tymora8.webp"],
             "debut": "2021-12-05",
-            "fin": "2022-09-31",
-            "statut": "Victoire !",
+            "statut": "en cours",
             "joueurs": [
                 {
                    "nom":"François", 
@@ -152,8 +102,8 @@
             "systeme": "D&D 5",
             "resume": "",
             "artworks": ["hildorien1.jpg", "hildorien2.jpg", "hildorien3.jpg", "hildorien4.jpg", "hildorien5.jpg", "hildorien6.jpg", "hildorien7.jpg", "hildorien8.jpg", "hildorien9.jpg", "hildorien10.jpg", "hildorien11.jpg", "hildorien12.jpg", "hildorien13.jpg", "hildorien14.jpg", "hildorien15.jpg", "hildorien16.jpg", "hildorien17.jpg", "hildorien18.jpg", "hildorien19.jpg", "hildorien19.jpg"],
-            "debut": "2019-09-01",
-            "fin": "2020-05-01",
+            "debut": "2018-01-02",
+            "fin": "2019-01-02",
             "statut": "Victoire !",
             "joueurs": [
                 {
@@ -247,8 +197,8 @@
             "systeme": "Adalon",
             "resume": "",
             "artworks": ["pelerinage1.jpg"],
-            "debut": "2018-05-01",
-            "fin": "2019-02-01",
+            "debut": "2017-01-02",
+            "fin": "2017-09-01",
             "statut": "Arrêt prématuré",
             "joueurs": [
                {
@@ -279,7 +229,7 @@
              "artwork" : "Conrad_pacome.jpg"
          },
          "systeme": "Faéments",
-         "resume": "Dans la vallée d'Eldamar, le jeune Pacôme est victime d'un mal inconnu. Les personnages mennent l'enquête et se retrouvent à la poursuite du mage Conrad Oeil malin qui grâce à un sceptre magique a lancé la malédiction sur Pacôme. Un compte à rebour est engagé à l'issue duquel le sceptre libèrera l'énergie de centaines de mages et tuera Pacôme. Aidé du mage Guetenoc, de son apprentie Anaclet, les personnages devront retrouver la trâce de Conrad et l'affronter pendant l'accomplissement du rituel.",
+         "resume": "Dans la vallée d'Eldamar, le jeune Pacôme est victime d'un mal inconnu. Les personnages mennent l'enquête et se retrouvent à la poursuite du mage Conrad Oeil malin qui grâce à un sceptre magique a lancé la malédiction sur Pacôme. Un compte à rebour est engagé à l'issu duquel le sceptre libèrera l'énergie de centaines de mages et tuera Pacôme. Aidé du mage Guetenoc, de son apprentie Anaclet, les personnages devront retrouver la trâce de Conrad et l'affronter pendant l'accomplissement du rituel.",
          "artworks": ["pacome1.jpg","pacome2.jpg","pacome3.jpg","pacome4.jpg","pacome5.jpg","pacome6.png"],
          "debut": "2017-01-02",
          "fin": "2017-09-01",
