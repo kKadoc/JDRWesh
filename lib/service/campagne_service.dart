@@ -40,6 +40,6 @@ class CampagneService {
       print(cYear);
     }
 
-    campagnes!.sort((a, b) => a.debut.compareTo(b.debut));
+    campagnes!.sort((a, b) => b.debut.compareTo(a.debut));
   }
 }
